@@ -3,8 +3,8 @@ import { FileUpload } from './components/FileUpload';
 import { TechStackDiagram } from './components/TechStackDiagram';
 import { ExportButton } from './components/ExportButton';
 import { CaptureButton } from './components/CaptureButton';
-import { DownloadTemplateLink } from './components/DownloadTemplateLink';
 import { BuyMeCoffeeButton } from './components/support/BuyMeCoffeeButton';
+import { InstructionsContainer } from './components/instructions/InstructionsContainer';
 import { parseSpreadsheet } from './utils/spreadsheetParser';
 import { TechStackData } from './types';
 import { FileSpreadsheet } from 'lucide-react';
@@ -32,10 +32,10 @@ export default function App() {
               Technical Stack Diagram Generator
             </h1>
           </div>
-          <p className="text-gray-600 mb-4">
+          <p className="text-gray-600 mb-6">
             Upload your spreadsheet to generate a technical stack diagram
           </p>
-          {!techStackData && <DownloadTemplateLink />}
+          <InstructionsContainer show={!techStackData} />
         </div>
 
         {!techStackData ? (

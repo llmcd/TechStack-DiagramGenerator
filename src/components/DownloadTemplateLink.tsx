@@ -34,7 +34,7 @@ export function DownloadTemplateLink() {
       )}
     >
       <FileDown className="w-4 h-4" />
-      {isDownloading ? 'Downloading...' : 'Download Sample Template'}
+      {isDownloading ? 'Downloading...' : 'Download Custom Template'}
     </SafeLink>
   );
 }
