@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
       "text-center text-gray-600"
     )}>
       <p className="mb-4 max-w-2xl mx-auto">
-        &copy; 2024 LLMCD. This project I created to help companies, IT departments, startups and tech founders. 
+        &copy; 2024 LLMCD. I created this project to help companies, IT departments, startups and tech founders. The app uses AI to process spreadsheets.
         The feedback collected will be used to improve the service for everyone.
       </p>
       
