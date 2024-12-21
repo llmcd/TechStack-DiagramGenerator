@@ -3,7 +3,6 @@ import { FileUpload } from './components/FileUpload';
 import { TechStackDiagram } from './components/TechStackDiagram';
 import { ExportButton } from './components/ExportButton';
 import { CaptureButton } from './components/CaptureButton';
-import { BuyMeCoffeeButton } from './components/support/BuyMeCoffeeButton';
 import { InstructionsContainer } from './components/instructions/InstructionsContainer';
 import { parseSpreadsheet } from './utils/spreadsheetParser';
 import { TechStackData } from './types';
@@ -58,8 +57,6 @@ export default function App() {
           </div>
         )}
       </div>
-      
-      <BuyMeCoffeeButton username="mcdlmac" />
     </div>
   );
 }
