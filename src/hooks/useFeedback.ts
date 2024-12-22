@@ -4,6 +4,7 @@ export const useFeedback = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedRating, setSelectedRating] = useState<'yes' | 'no' | null>(null);
   const [hasSubmitted, setHasSubmitted] = useState(false);
+  const [showThankYou, setShowThankYou] = useState(false);
 
   const handleRating = useCallback((rating: 'yes' | 'no') => {
     // Prevent opening modal if feedback was already submitted
@@ -22,14 +23,21 @@ export const useFeedback = () => {
   const handleSubmitComplete = useCallback(() => {
     setHasSubmitted(true);
     handleCloseModal();
+    setShowThankYou(true);
   }, [handleCloseModal]);
+
+  const handleHideThankYou = useCallback(() => {
+    setShowThankYou(false);
+  }, []);
 
   return {
     isModalOpen,
     selectedRating,
     hasSubmitted,
+    showThankYou,
     handleRating,
     handleCloseModal,
-    handleSubmitComplete
+    handleSubmitComplete,
+    handleHideThankYou
   };
 };
