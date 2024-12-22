@@ -35,7 +35,7 @@ export default function App() {
               </h1>
             </div>
             <p className="text-gray-600 mb-6">
-              Convert spreadsheets data to technical stack diagrams
+              Convert spreadsheet data to tech stack diagrams
             </p>
             <InstructionsContainer show={!techStackData} />
           </div>
