@@ -1,6 +1,7 @@
 import React from 'react';
 import { FeedbackButtons } from './FeedbackButtons';
 import { FeedbackModal } from './FeedbackModal';
+import { ThankYouModal } from './ThankYouModal';
 import { useFeedback } from '../../hooks/useFeedback';
 
 export const FeedbackSection: React.FC = () => {
@@ -8,9 +9,11 @@ export const FeedbackSection: React.FC = () => {
     isModalOpen,
     selectedRating,
     hasSubmitted,
+    showThankYou,
     handleRating,
     handleCloseModal,
-    handleSubmitComplete
+    handleSubmitComplete,
+    handleHideThankYou
   } = useFeedback();
 
   return (
@@ -25,6 +28,10 @@ export const FeedbackSection: React.FC = () => {
         rating={selectedRating}
         onClose={handleCloseModal}
         onSubmitComplete={handleSubmitComplete}
+      />
+      <ThankYouModal 
+        show={showThankYou} 
+        onClose={handleHideThankYou}
       />
     </div>
   );
