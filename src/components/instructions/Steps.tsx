@@ -5,6 +5,10 @@ export const Steps = () => {
   const steps = [
     {
       icon: FileDown,
+      text: 'Download the demo template with prefilled data to see how the service works'
+    },
+     {
+      icon: FileDown,
       text: 'Download the custom template spreadsheet'
     },
     {
